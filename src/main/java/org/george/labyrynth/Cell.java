@@ -6,7 +6,7 @@ package org.george.labyrynth;
 public class Cell {
     private char type;
     private boolean visible;
-    Cell t;
+
 
     public char getType() {
         return type;

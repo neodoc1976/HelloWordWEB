@@ -82,6 +82,27 @@ public class Walker {
         hp=100;
     }
 
+    public void rotate (){
+        switch (direction){
+            case UP:
+                direction=RIGHT;
+                break;
+            case RIGHT:
+                direction=DOWN;
+                break;
+            case DOWN:
+                direction=LEFT;
+                break;
+            case LEFT:
+                direction=UP;
+                break;
+
+
+
+        }
+
+    }
+
 
 
 

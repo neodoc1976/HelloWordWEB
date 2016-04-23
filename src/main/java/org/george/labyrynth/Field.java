@@ -24,9 +24,7 @@ public class Field {
 
     }
 
-    public void setWalker(Walker w) {
-        walker = w;
-    }
+
 
     public void printField(PrintWriter writer) {
 
@@ -216,8 +214,12 @@ public class Field {
         t.setVisible();
         printMessageHpLevel(writer);
 
-
-
+    }
+    public void turnClockwise (PrintWriter writer) {
+        walker.rotate();
+        Cell t = getNextCell(walker.getDirection());
+        t.setVisible();
+        printMessageHpLevel(writer);
     }
 
 

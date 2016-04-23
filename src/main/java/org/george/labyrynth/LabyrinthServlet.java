@@ -70,19 +70,14 @@ public class LabyrinthServlet extends HttpServlet {
                 case ("turn down"):
                     field.turningPoint(Walker.DOWN,out);
                     break;
-
-
-
-
-
+                case ("rotate"):
+                    field.turnClockwise(out);
             }
 
         }
 
 
-
         field.printField(out);
-
 
         response.getWriter().print("<a href='/Robo?move=right'><button><big><strong>Step RIGHT</strong></big></button></a>");
         response.getWriter().print("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp");
@@ -99,6 +94,8 @@ public class LabyrinthServlet extends HttpServlet {
         response.getWriter().println("<a href='/Robo?move=turn up'><button><big><strong>Turn UP</strong></big></button></a>");
         response.getWriter().print("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp");
         response.getWriter().println("<a href='/Robo?move=turn down'><button><big><strong>Turn DOWN</strong></big></button></a>");
+        response.getWriter().print("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp");
+        response.getWriter().println("<a href='/Robo?move=rotate'><button><big><strong>Rotate Clockwise</strong></big></button></a>");
         response.getWriter().println("</html></body>");
 
 
